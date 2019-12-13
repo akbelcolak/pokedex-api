@@ -5,10 +5,22 @@
 // in pokeData there are pokemon objects.
 // in the objects there are properties as key:value pair,
 // properties as arrays and properties as objects.
-// should I loop throug all values include the values inside the arrays and objects?
+// should I loop through all values include the values inside the arrays and objects?
 
 const value = (pokeArray, value) => {
-  
+  pokeArray.forEach(poke => {
+      const res = [];
+      const pokemon = {};
+      if (Object.values(poke).includes(value)) {
+          pokemon.name = poke.name;
+          pokemon.num = poke.num;
+          res.push(pokemon);
+          //return pokemon;
+          console.log(pokemon);
+      } else {
+          return [];
+      }
+  })
 
 };
 
