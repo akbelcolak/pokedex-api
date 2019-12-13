@@ -15,7 +15,6 @@ const keyValue = (pokeArray, key, value) => {
           return myMap;}
           else {return [];}
       };
-};
 
 
 module.exports = keyValue;
